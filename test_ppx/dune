@@ -1,0 +1,4 @@
+(executable
+  (name test_ppx)
+  (public_name test_findlib.test_ppx)
+  (preprocess (pps test_findlib.ppx)))

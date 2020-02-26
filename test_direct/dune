@@ -1,0 +1,4 @@
+(executable
+  (name test_direct)
+  (public_name test_findlib.test_direct)
+  (libraries findlib.dynload))

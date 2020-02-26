@@ -1,0 +1,4 @@
+(library
+  (name plugin)
+  (public_name test_findlib.plugin)
+  (libraries pcre))
