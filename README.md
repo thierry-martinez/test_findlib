@@ -2,6 +2,8 @@
 
 This repository exhibits a problem I have while using findlib's dynamic loading facilities inside a PPX.
 
+*Update:* it appears that to make `findlib.dynload` work, `dune` generates a file `findlib_initl.ml-gen` to initialize findlib predicates and record packages linked with the executable. But this file is generated for executable target only, and is not generated for the intermediate executable generated for ppx transformations. In the directory `ppx_fixed/` of this repository, the module `Findlib_for_ppx` provides a function `init_predicates` to initialize findlib predicates, and a function `load_packages` that does not fail if a module is already linked (since we do not know which packages have already been linked).
+
 A module `Plugin` is defined in the directory `plugin/`, which relies on the library `pcre`.
 The dynamic library `plugin/plugin.cmxs` can be built with `dune build plugin/plugin.cmxs`.
 

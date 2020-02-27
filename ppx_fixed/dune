@@ -1,0 +1,5 @@
+(library
+  (name test_ppx_fixed)
+  (public_name test_findlib.ppx_fixed)
+  (kind ppx_rewriter)
+  (libraries unix findlib.dynload ocaml-migrate-parsetree compiler-libs.common))
